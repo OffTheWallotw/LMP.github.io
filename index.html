@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Acceso WiFi</title>
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Lobster&family=Righteous&family=Satisfy&display=swap');
+    
+  body {
+      background-color: #f1f1f1;
+      font-family: 'Courgette', cursive;
+      font-size: 30px;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 400px;
+      margin: 100px auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 20px 20px rgba(255, 0, 234, 0.1);
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 0px;
+
+    }
+    .logo{
+      text-align: center;
+      left: 60px;
+      margin-bottom: 0px;
+      margin-top: -10px;
+      position: relative;
+
+    }
+    
+    input[type="submit"] {
+      background-color: #4CAF50;
+      max-width: 1200px;
+      margin: 0 auto;
+      border: none;
+      color: #fff;
+      padding: 10px 50px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    input[type="submit"]{
+      position: relative;
+      left: 120px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bienvenido a</h1>
+    <img src="/LMP/logo.PNG" alt=""style="width: 300px; height: auto;" class="logo">
+    <form action="https://www.facebook.com/sharer/sharer.php" method="get" target="_blank" >
+      <input type="text" name="u" value="" style="display: none;"><!-- Aquí se mostrará la URL actual -->
+      <input type="hidden" name="display" value="popup">
+      <input type="submit" value="Conectar">
+    </form>
+  </div>
+  
+  <script>
+    window.onload = function() {
+      var urlInput = document.querySelector('input[name="u"]');
+      urlInput.value = window.location.href; // Obtener la URL actual y mostrarla en el campo de entrada oculto
+    }
+  </script>
+</body>
+</html>
